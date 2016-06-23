@@ -1,0 +1,49 @@
+profiling:
+java -Xrunhprof:cpu=samples -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr .......
+OR
+     -Xrunhprof:cpu=times,depth=6 ......
+
+memory options:
+java -Xms32m -Xmx128m    (startup 32 meg memory -- max of 128 megs)
+     -noasyncgc    (turn off asynchronous garbage collection)
+     -verbosegc    (print to screen whenever garbage collection is performed)
+
+javadoc -author -version -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.util
+
+javadoc -author -version -sourcepath /users/rob/java/FissuresSeed/edu/iris/Fissures/seed/*/*.java
+
+----------
+
+java -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jrdseed -i test1.seed -v -f test1.filter.txt -x test_export.seed
+
+
+java -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jrdseed -i DATALESS.II.013002 -i DATALESS.UW.20020114 -v -f importfilter.txt -x test_export.seed -l 'dataless merge' -o 'IRIS DMC' -s serialStore.bin
+
+SAC>
+read test_export.sac
+begindevices sgf
+color blue skeleton black
+sgf prefix rob1
+sgf directory .
+plot1
+quit
+${SACDIR}/utils/sgftops rob1001.sgf rob1001.ps
+
+java -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr -i Jseedr_sample1.seed -v -x test_export2.sac -X SAC
+
+java -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr -i Jseedr_sample1.seed -i Jseedr_sample2.seed -v -f Jseedr_filter1.txt -f Jseedr_filter2.txt -x test_export3.seed -X SEED
+
+java -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr -i 1996event.seed -v -x 1996event.sac -X SAC -f filterfile3.txt
+
+java -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr -i DATALESS.II.013002 -I dataless -i DATALESS.UW.20020114 -I dataless -v -s serialStore.bin -x IIUWdataless_merge.seed -X dataless -l IIUWdataless_merge -o 'IRIS DMC'
+
+java -Xms32m -Xmx128m -Xrunhprof:cpu=samples -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr -i 1996event.seed -v -x test_export1.seed -X SEED
+
+java -Xms32m -Xmx128m -Xrunhprof:cpu=times,depth=8 -classpath /users/rob/java/FissuresSeed edu.iris.Fissures.seed.app.Jseedr -i 1996event.seed -v -x test_export1.seed -X SEED
+
+
+---------------------------------
+
+Note: move seed.util package to codec.util in a future release
+
+
