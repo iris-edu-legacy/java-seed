@@ -242,12 +242,13 @@ public class Format
       return r * sign;
    }
 
+
    /**
-      Converts a string of digits to a <tt>double</tt>
-
-      @param s a string
+    * Converts a string of digits to a <tt>double</tt>
+    * 
+    * @param s
+    * @return
     */
-
    public static double atof(String s)
    {  int i = 0;
       int sign = 1;
@@ -393,13 +394,13 @@ public class Format
       return pad(sign(s, r));
    }
 
+
    /**
-      Formats a character into a string (like sprintf in C)
-
-      @param x the value to format
-      @return the formatted string
+    * Formats a character into a string (like sprintf in C)
+    * 
+    * @param c
+    * @return
     */
-
    public String format(char c)
    {  if (fmt != 'c')
          throw new java.lang.IllegalArgumentException();
@@ -408,13 +409,13 @@ public class Format
       return pad(r);
    }
 
+
    /**
-      Formats a string into a larger string (like sprintf in C)
-
-      @param x the value to format
-      @return the formatted string
+    * Formats a string into a larger string (like sprintf in C)
+    * 
+    * @param s
+    * @return
     */
-
    public String format(String s)
    {  if (fmt != 's')
          throw new java.lang.IllegalArgumentException();

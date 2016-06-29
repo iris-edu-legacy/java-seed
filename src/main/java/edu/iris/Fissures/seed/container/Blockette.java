@@ -2053,10 +2053,12 @@ public class Blockette extends SeedObject {
 	    // set the blockette type
 	    blocketteType = Integer.parseInt(fieldValue.get(1).toString());
 	}
+
 	
 	/**
 	 * allow explicit setting of the type -- use with caution!
-	 * @throws SeedException
+	 * 
+	 * @param i
 	 */
 	protected void setType(int i) {
 	    // set the blockette type explicitly
@@ -2064,15 +2066,6 @@ public class Blockette extends SeedObject {
 	}
 	
 	
-	/**
-     * DEACTIVATED
-	 * Reset the modification time stamp for the blockette.  This refers to the
-	 * fieldValue Vector, index 0.  Time stamp is a Btime object.
-	 */ 
-//	private void resetMTime() throws SeedException {
-//		Btime mTime = new Btime();
-//		fieldValue.set(0,mTime);
-//	}
 	
 	/**
 	 * Initialize instance variables.

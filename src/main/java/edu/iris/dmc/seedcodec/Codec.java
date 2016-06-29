@@ -12,10 +12,18 @@ package edu.iris.dmc.seedcodec;
 public class Codec implements B1000Types {
 
     public Codec() {}
-
+    
     /**
      * Decompresses the data into the best java primitive type for the given
      * compression and returns it.
+     * 
+     * @param type integer representation of the encoding type
+     * @param b wave data
+     * @param numSamples number of samples
+     * @param swapBytes The swap order of the data itself is specified for the channel in the data format dictionary
+     * @return
+     * @throws CodecException
+     * @throws UnsupportedCompressionType
      */
     public DecompressedData decompress(int type,
                                        byte[] b,
@@ -26,7 +34,7 @@ public class Codec implements B1000Types {
         int[] itemp;
         short[] stemp;
         float[] ftemp;
-        double[] dtemp;
+
         int offset = 0;
         switch(type){
             case SHORT:
@@ -136,10 +144,15 @@ public class Codec implements B1000Types {
         return out;
     }
 
+    
     /**
      * returns an integer that represent the java primitive that the data will
-     * decompresses to. This is to allow for SEED types 4 and 5, float and
+     * decompress to. This is to allow for SEED types 4 and 5, float and
      * double, which cannot be represented as int without a loss of precision.
+     * 
+     * @param type integer representation of the encoding type
+     * @return
+     * @throws UnsupportedCompressionType
      */
     public int getDecompressedType(int type) throws UnsupportedCompressionType {
         if(type == INT24 || type == INTEGER || type == STEIM1 || type == STEIM2 || type == CDSN || type == SRO) {

@@ -90,10 +90,15 @@ public class Steim1 {
 		return samples;
 	}
 
+	
 	/**
-	 * Abbreviated, zero-bias version of decode().
-	 *
-	 * @see edu.iris.Fissures.codec.Steim1#decode(byte[],int,boolean,int)
+	 * Abbreviated, zero-bias version of decode(). 
+	 * 
+	 * @param b
+	 * @param numSamples
+	 * @param swapBytes
+	 * @return
+	 * @throws SteimException
 	 */
 	public static int[] decode(byte[] b, int numSamples, boolean swapBytes) throws SteimException {
 		// zero-bias version of decode
@@ -230,7 +235,11 @@ public class Steim1 {
 
 	/**
 	 * Abbreviated zero-bias version of encode().
-	 * @see edu.iris.Fissures.codec.Steim1#encode(int[],int,int)
+	 * 
+	 * @param samples
+	 * @param frames
+	 * @return
+	 * @throws SteimException
 	 */
 	public static SteimFrameBlock encode(int[] samples, int frames) throws SteimException {
 		return encode(samples,frames,0);   // zero-bias version of encode

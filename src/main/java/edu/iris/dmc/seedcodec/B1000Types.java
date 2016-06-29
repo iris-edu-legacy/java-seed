@@ -2,7 +2,7 @@ package edu.iris.dmc.seedcodec;
 
 /**
  * Constants for the various data compression types in seed blockette 1000.
- * @see http://www.fdsn.org
+ * http://www.fdsn.org
  *
  *
  * Created: Thu Nov 21 16:35:37 2002

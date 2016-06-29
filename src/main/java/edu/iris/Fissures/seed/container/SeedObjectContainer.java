@@ -84,17 +84,16 @@ public class SeedObjectContainer implements ObjectContainer {
 		this(cacheDir, capacity, false);
 	}
 
+	// REC
+	
 	/**
 	 * Constructor specifying a directory for disk cache persistence and
 	 * bootstrap recall of previous session from disk if so flagged. Uses the
 	 * default cache capacity value.
 	 * 
-	 * @param cacheDir
-	 *            the base directory where the disk cache will reside
-	 * @param loadPrevious
-	 *            true if previous disk persistence cache should be referenced.
+	 * @param loadPrevious true if previous disk persistence cache should be referenced.
+	 * @throws Exception
 	 */
-	// REC
 	public SeedObjectContainer(boolean loadPrevious) throws Exception {
 		initialize(loadPrevious);
 	}

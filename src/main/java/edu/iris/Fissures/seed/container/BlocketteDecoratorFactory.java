@@ -40,12 +40,15 @@ public class BlocketteDecoratorFactory {
         map.clear();  // clear the object container map
     }
 
+    
     /**
      * Construct and return a new CachedBlocketteDecorator seeding it with the offered Blockette
      * and indicating true if disk persistence caching is being used.
+     * 
      * @param blk
-     * @param persistenceCached
      * @return a new CachedBlocketteDecorator
+     * @throws ContainerException
+     * @throws SeedException
      */
     public static CachedBlocketteDecorator createCachedDecorator(Blockette blk)
     throws ContainerException, SeedException {
