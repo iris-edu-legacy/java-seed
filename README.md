@@ -18,7 +18,7 @@ To provide proof of concept for the JavaSeed API, a skeletal application was wri
 
 JavaSeed continues to see use and development at IRIS, even as IRIS is officially moving away from the SEED format for metadata.  Others, such as Yazan@iris are diligently maintaining this API and making it available on GitHub.
 
-### Introductory Slides
+### How to Use
 
-Included is a PDF of slides from 2005, where the philosophy and general use patterns for JavaSeed are described.
+There is unfortunately not much in the way of documentation for JavaSeed, but some driver examples provide a good idea for how it is employed.  Take a look at the [Jseedr](src/main/java/edu/iris/Fissures/seed/app/Jseedr.java) application for starters.
 
