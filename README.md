@@ -1,10 +1,8 @@
-# Java-Seed
-
 # JavaSeed - An API for FDSN SEED data
 
 ### About
 
-Java SEED is an API that began its life in 2001 in an effort to support applications, like PDCC, that were starting to be developed.  A comprehensive, object-oriented application interface was needed to work with SEED data and convert to and from other file formats.
+Java SEED is an API that began its life in 2001 in an effort to support applications, like PDCC, that were to make use of the FDSN standard SEED format (fdsn.org) for seismic datasets.  A comprehensive, object-oriented application interface was needed to work with SEED data and convert to and from other file formats.
 
 Originally called FISSURES SEED, JavaSeed is the product of this endeavor, and is used in whole or in part by a number of applications in the seismic community over these many years.
 
