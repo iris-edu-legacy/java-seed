@@ -16,9 +16,10 @@ In adopting an object format that could conceivably accommodate most known seism
 
 To provide proof of concept for the JavaSeed API, a skeletal application was written that would drive all of the Java class modules to perform front to back operations, such as reading and writing SEED volumes, converting to other file formats, and so on.  Called Jseedr, it consists of a simple command line interface with flagged parameters to direct the operations.  Jseedr allows users to easily access JavaSeed’s most basic functionality to perform typical operations.  More advanced applications tap into various parts of JavaSeed to take advantage of even more functionality.
 
-JavaSeed continues to see use and development at IRIS, even as IRIS is officially moving away from the SEED format for metadata.  Others, such as Yazan@iris are diligently maintaining this API and making it available on GitHub.
-
 ### How to Use
 
 There is unfortunately not much in the way of documentation for JavaSeed, but some driver examples provide a good idea for how it is employed.  Take a look at the [Jseedr](src/main/java/edu/iris/Fissures/seed/app/Jseedr.java) application for starters.
 
+### DISCLAIMER - Legacy Software
+
+JavaSeed is now released to the public AS-IS for use and maintenance and is not actively supported by EarthScope Consortium.  Please feel free to make use of this software in your own projects as you wish.
