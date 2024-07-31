@@ -59,9 +59,15 @@ public class BlocketteDecoratorFactory {
      * return a handle to the ObjectContainer that relates to this Volume Number
      */
     public static ObjectContainer getContainerByVol(int volNum) {
-        Vector map = getInstance().objectContainerMap;
-        if (volNum+1 > map.size()) return null;  // this volume is out of bounds
-        return (ObjectContainer) map.get(volNum);
+        try {
+            final Vector map = getInstance().objectContainerMap;
+            synchronized (map) {
+                if (volNum+1 > map.size()) return null;  // this volume is out of bounds
+                return (ObjectContainer) map.get(volNum);
+            }
+        } catch (ArrayIndexOutOfBoundsException ex) {
+            return null;  // this volume is out of bounds
+        }
     }
     
     /**
