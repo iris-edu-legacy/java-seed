@@ -4,7 +4,7 @@
 
 	<groupId>edu.iris.dmc</groupId>
 	<artifactId>java-seed</artifactId>
-	<version>3.8.5</version>
+	<version>3.8.6</version>
 	<packaging>jar</packaging>
 
 	<description>Java parser for the Standard for the Exchange of Earthquake Data (SEED)</description>
@@ -23,6 +23,10 @@
 		<developer>
 			<name>Yazan Suleiman</name>
 			<organization>IRIS</organization>
+		</developer>
+		<developer>
+			<name>Kevin Frechette</name>
+			<organization>ISTI</organization>
 		</developer>
 	</developers>
 
